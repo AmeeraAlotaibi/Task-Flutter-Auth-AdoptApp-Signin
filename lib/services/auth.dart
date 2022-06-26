@@ -12,6 +12,7 @@ class AuthServices {
       Response response =
           await _dio.post(_baseUrl + '/signup', data: user.toJson());
       token = response.data["token"];
+      print(token);
     } on DioError catch (error) {
       print(error);
     }
