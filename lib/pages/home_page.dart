@@ -27,6 +27,9 @@ class HomePage extends StatelessWidget {
                         ListTile(
                           title: Text("Logout"),
                           trailing: const Icon(Icons.logout),
+                          onTap: () {
+                            context.read<AuthProvider>().logout();
+                          },
                         ),
                       ],
                     )

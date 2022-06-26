@@ -1,13 +1,13 @@
-
 import 'package:adopt_app/models/user.dart';
 import 'package:adopt_app/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class SigninPage extends StatelessWidget {
-   SigninPage({Key? key}) : super(key: key);
+  SigninPage({Key? key}) : super(key: key);
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -38,6 +38,7 @@ class SigninPage extends StatelessWidget {
                     user: User(
                         username: usernameController.text,
                         password: passwordController.text));
+                context.pop();
               },
               child: const Text("Sign In"),
             )
