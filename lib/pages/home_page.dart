@@ -28,6 +28,13 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 GoRouter.of(context).push('/signup');
               },
+            ),
+            ListTile(
+              title: const Text("Signin"),
+              trailing: const Icon(Icons.login),
+              onTap: () {
+                GoRouter.of(context).push('/signin');
+              },
             )
           ],
         ),
